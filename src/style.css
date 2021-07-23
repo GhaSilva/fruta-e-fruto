@@ -1,0 +1,12 @@
+.imagem-carrosseu-um{
+    object-fit: cover;
+    object-position: 0 90%;
+    height: 400px;
+}
+.imagem-carrosseu-dois{
+    object-fit: cover;
+    height: 400px;
+}
+.fonte-titulo{
+    font-family: 'Pacifico', cursive;
+}
