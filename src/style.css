@@ -2,11 +2,30 @@
     object-fit: cover;
     object-position: 0 90%;
     height: 400px;
+
 }
 .imagem-carrosseu-dois{
     object-fit: cover;
     height: 400px;
+
 }
 .fonte-titulo{
     font-family: 'Pacifico', cursive;
+}
+
+.cor-especial{
+    color: darkred;
+}
+.botao-cor-especial{
+    background-color: darkred;
+    color: white;
+}
+
+.borda-cor-especial{
+    border-color: darkred;
+}
+
+.card-posicao-imagen{
+    object-fit: cover;
+    height: 200px;
 }
