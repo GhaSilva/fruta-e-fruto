@@ -11,10 +11,10 @@
 </head>
 
 <body>
-  <header></header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand fonte-titulo">fruta & fruto</a>
+      <a class="navbar-brand fonte-titulo" style="color: darkred;">fruta & fruto</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,13 +22,15 @@
         <div class="navbar-nav">
           <a class="nav-link active" href="#">Início</a>
           <a class="nav-link" href="#">Receitas</a>
-          <a class="nav-link" href="#">Quem somos</a>
-          <a class="nav-link" href="#">Contato</a>
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-quemsomos">Quem somos</a>
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-contato">Contato</a>
         </div>
       </div>
     </div>
   </nav>
+  </header>
   <main>
+    <section class="container-fluid bg-light">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-interval="2500" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -67,7 +69,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card borda-cor-especial" style="width: 18rem;">
+        <div class="card borda-cor-especial mt-3" style="width: 18rem;">
           <img src="src/img/receita-abacate.jpg" class="card-img-top card-posicao-imagen" alt="tigela com salada de abacate, vista superior">
           <div class="card-body">
             <h5 class="card-title">Tigela de abacate</h5>
@@ -100,10 +102,10 @@
 
     </div>
   </div>
-  <div class="container pt-5">
+  <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card borda-cor-especial" style="width: 18rem;">
+        <div class="card borda-cor-especial mt-3" style="width: 18rem;">
           <img src="src/img/receita-oriental.jpg" class="card-img-top card-posicao-imagen" alt="tigela com salada de vegetais estilo oriental, vista de cima">
           <div class="card-body">
             <h5 class="card-title">Prato oriental</h5>
@@ -134,18 +136,72 @@
       </div>
     </div>
   </div>
-
+</section>
   </main>
-
+  <footer class="bg-secondary p-3 mt-3">
+    <p class="text-light m-0 text-center">contato: <a class="text-light" href="mailto:email@frutafruto.com.br">email@frutafruto.com.br</a></p>
+  </footer>
   
+
+
+
+
+  <div class="modal fade" id="modal-contato" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contato</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nome</label>
+            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Nome e Sobrenome">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Insira aqui sua mensagem" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn botao-cor-especial">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-quemsomos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Quem somos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Estamos no mercado desde 1953 e, por isso, somos um dos restaurantes mais tradicionais da cidade de São Paulo. 
+          Estamos localizados na Avenida Paulista, de onde enviamos nossos produtos para atender aos clientes localizados em todas as regiões da cidade de São Paulo.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
   
 
 
 
 
-  <p>contato:<a href="mailto:email@frutafruto.com.br">email@frutafruto.com.br</a></p>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+ 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
